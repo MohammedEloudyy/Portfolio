@@ -79,13 +79,13 @@ export default function Skills() {
           <AnimatePresence mode="popLayout">
             {getFilteredSkills().map((skill, index) => (
               <motion.div
-                key={skill.name}
+                key={`${activeTab}-${skill.name}`}
                 layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
-                whileHover={{ y: -4 }}
+                initial={{ opacity: 0, y: 15, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.35, delay: index * 0.03, ease: [0.16, 1, 0.3, 1] }}
+                whileHover={{ y: -5 }}
                 className="glass-panel p-6 rounded-2xl border border-zinc-800/80 hover:border-amber-500/40 transition-all duration-300 group"
               >
                 <div className="flex items-center justify-between mb-3">
@@ -103,12 +103,12 @@ export default function Skills() {
                   <span className="text-sm font-mono font-bold text-amber-400">{skill.level}%</span>
                 </div>
 
-                {/* Progress Bar */}
+                {/* Progress Bar Animation */}
                 <div className="w-full h-2 bg-zinc-900 rounded-full overflow-hidden border border-zinc-800/60">
                   <motion.div
                     initial={{ width: 0 }}
                     animate={{ width: `${skill.level}%` }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    transition={{ duration: 0.8, delay: 0.1 + (index * 0.03), ease: [0.16, 1, 0.3, 1] }}
                     className="h-full bg-gradient-to-r from-amber-500 to-amber-300 rounded-full"
                   ></motion.div>
                 </div>

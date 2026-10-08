@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Code2, Sparkles, Mail, ArrowUpRight, Download } from 'lucide-react';
+import { Menu, X, Mail, ArrowUpRight, Download } from 'lucide-react';
 import { personalData } from '../data/portfolioData';
 
 export default function Navbar() {
@@ -61,20 +61,19 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto pointer-events-auto">
         <div
-          className={`flex items-center justify-between px-4 sm:px-6 py-2.5 rounded-full transition-all duration-500 border ${
-            scrolled
+          className={`flex items-center justify-between px-4 sm:px-6 py-2.5 rounded-full transition-all duration-500 border ${scrolled
               ? 'bg-[#09090b]/90 backdrop-blur-xl border-zinc-700/80 shadow-[0_20px_50px_rgba(0,0,0,0.6)] shadow-amber-500/5'
               : 'bg-[#121215]/80 backdrop-blur-lg border-zinc-800/80 shadow-lg'
-          }`}
+            }`}
         >
           {/* Brand Logo & Status */}
           <a href="#home" className="flex items-center gap-3 group">
             <motion.div
               whileHover={{ scale: 1.08, rotate: 4 }}
               whileTap={{ scale: 0.95 }}
-              className="w-9 h-9 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-zinc-950 font-bold shadow-md shadow-amber-500/20"
+              className="w-9 h-9 rounded-full overflow-hidden border border-amber-500/40 shadow-md shadow-amber-500/20 bg-zinc-950"
             >
-              <Code2 className="w-4 h-4 text-zinc-950" />
+              <img src="/ME_Portfolio_Logo.webp" alt="Mohammed Eloudyy Logo" className="w-full h-full object-cover" width="36" height="36" />
             </motion.div>
 
             <div className="flex flex-col">
@@ -97,11 +96,10 @@ export default function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className={`px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all duration-300 relative ${
-                    isActive
+                  className={`px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all duration-300 relative ${isActive
                       ? 'text-amber-400'
                       : 'text-zinc-300 hover:text-white'
-                  }`}
+                    }`}
                 >
                   {link.name}
                   {isActive && (
@@ -172,11 +170,10 @@ export default function Navbar() {
                     key={link.name}
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className={`block px-4 py-3 rounded-2xl text-sm font-semibold transition-colors ${
-                      isActive
+                    className={`block px-4 py-3 rounded-2xl text-sm font-semibold transition-colors ${isActive
                         ? 'bg-amber-500/15 text-amber-400 border border-amber-500/30'
                         : 'text-zinc-200 hover:text-amber-400 hover:bg-zinc-900'
-                    }`}
+                      }`}
                   >
                     {link.name}
                   </a>
@@ -198,7 +195,6 @@ export default function Navbar() {
                 onClick={() => setMobileOpen(false)}
                 className="flex items-center justify-center gap-2 w-full py-3 rounded-2xl bg-amber-500 text-zinc-950 font-bold text-sm text-center shadow-lg shadow-amber-500/20"
               >
-                <Sparkles className="w-4 h-4" />
                 Me Contacter
               </a>
             </div>

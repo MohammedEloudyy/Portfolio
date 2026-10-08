@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, ArrowRight, Mail, MapPin, CheckCircle2, Code, Download } from 'lucide-react';
+import { ArrowRight, Mail, MapPin, CheckCircle2, Code, Download } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './SocialIcons';
 import { personalData, statsData } from '../data/portfolioData';
 
@@ -60,9 +60,8 @@ export default function Hero() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs sm:text-sm font-medium shadow-sm backdrop-blur-md"
+              className="inline-flex items-center px-4 py-2 rounded-full bg-zinc-900/90 border border-zinc-800 text-amber-400 text-xs sm:text-sm font-medium tracking-wide shadow-sm"
             >
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
               <span>{personalData.status}</span>
             </motion.div>
 
@@ -134,7 +133,6 @@ export default function Hero() {
                 href="#projects"
                 className="flex items-center gap-2 px-7 py-3.5 rounded-xl bg-zinc-900/80 hover:bg-zinc-800 border border-amber-500/40 hover:border-amber-400 text-amber-400 font-semibold transition-all text-base"
               >
-                <Sparkles className="w-5 h-5 text-amber-400" />
                 Voir Mes Projets
                 <ArrowRight className="w-4 h-4" />
               </a>
@@ -192,7 +190,7 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="lg:col-span-5 flex justify-center"
           >
-            <div className="relative w-72 sm:w-80 lg:w-96 aspect-[3/4] max-w-full">
+            <div className="relative w-72 sm:w-80 lg:w-96 aspect-square max-w-full">
               {/* Outer Glowing Border Ring */}
               <motion.div
                 whileHover={{ scale: 1.02, rotate: 0 }}
@@ -202,7 +200,10 @@ export default function Hero() {
                   <img
                     src={personalData.avatar}
                     alt="Mohammed Eloudyy Portrait"
-                    className="w-full h-full object-cover object-top transform hover:scale-105 transition-transform duration-700"
+                    fetchPriority="high"
+                    width="800"
+                    height="800"
+                    className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
                   />
                   {/* Glass overlay at bottom of avatar */}
                   <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent pt-10 pb-4 px-4 text-center">

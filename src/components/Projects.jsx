@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FolderGit2, Eye } from 'lucide-react';
+import { Eye } from 'lucide-react';
 import { GithubIcon } from './SocialIcons';
 import { projectsData } from '../data/portfolioData';
 import ProjectModal from './ProjectModal';
@@ -28,7 +28,7 @@ export default function Projects() {
           className="text-center space-y-4 mb-14"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-mono font-semibold uppercase tracking-wider">
-            <FolderGit2 className="w-3.5 h-3.5" /> Portfolio
+            Portfolio
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
             Projets & <span className="gold-gradient-text">Réalisations</span>
@@ -72,11 +72,12 @@ export default function Projects() {
               >
                 <div>
                   {/* Image Container with Hover Overlay */}
-                  <div className="relative aspect-video overflow-hidden bg-zinc-900">
+                  <div className="relative h-72 sm:h-80 md:h-96 w-full overflow-hidden bg-zinc-950/80 flex items-center justify-center p-3 border-b border-zinc-800/80">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                      className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500 rounded-xl shadow-lg"
                     />
                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 backdrop-blur-xs">
                       <motion.button

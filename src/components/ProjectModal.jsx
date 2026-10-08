@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, CheckCircle2, Sparkles } from 'lucide-react';
+import { X, CheckCircle2 } from 'lucide-react';
 import { GithubIcon } from './SocialIcons';
 
 export default function ProjectModal({ project, onClose }) {
@@ -31,11 +31,11 @@ export default function ProjectModal({ project, onClose }) {
             </button>
 
             {/* Modal Image Header */}
-            <div className="relative aspect-video rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
+            <div className="relative h-72 sm:h-96 md:h-[450px] w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-950 flex items-center justify-center p-3">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover object-center"
+                className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
               />
               <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-amber-500 text-zinc-950 font-bold text-xs font-mono">
                 {project.category}
@@ -55,7 +55,8 @@ export default function ProjectModal({ project, onClose }) {
             {/* Features List */}
             <div className="space-y-3 pt-4 border-t border-zinc-800">
               <h4 className="text-sm font-mono font-bold uppercase text-amber-400 flex items-center gap-2">
-                <Sparkles className="w-4 h-4" /> Fonctionnalités Clés
+                <img src="/ME_Portfolio_Logo.webp" alt="ME Logo" className="w-5 h-5 rounded-full object-cover border border-amber-500/40 shrink-0" width="20" height="20" />
+                Fonctionnalités Clés
               </h4>
               <div className="grid sm:grid-cols-2 gap-3">
                 {project.features.map((feature, idx) => (

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUp, Mail, Code2, Download, MapPin, Sparkles, Check, Copy, ArrowRight, Heart } from 'lucide-react';
+import { ArrowUp, Mail, Download, MapPin, Check, Copy, ArrowRight, Heart } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './SocialIcons';
 import { personalData } from '../data/portfolioData';
 
@@ -37,12 +37,12 @@ export default function Footer() {
     <footer className="relative bg-[#08080a]/90 backdrop-blur-xl border-t border-zinc-800/80 pt-20 pb-10 overflow-hidden">
       {/* Top subtle golden accent gradient border line */}
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-amber-500/40 to-transparent" />
-      
+
       {/* Background ambient glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-48 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Pre-Footer Action Banner */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -53,7 +53,7 @@ export default function Footer() {
         >
           <div className="space-y-2 text-center lg:text-left max-w-xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-mono font-semibold">
-              <Sparkles className="w-3.5 h-3.5" /> Nouvelle Collaboration
+              Nouvelle Collaboration
             </div>
             <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
               Prêt à concevoir votre prochaine solution web ?
@@ -88,15 +88,15 @@ export default function Footer() {
 
         {/* Main 4-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-16 border-b border-zinc-800/80">
-          
+
           {/* Col 1: Identity & Bio (5 cols) */}
           <div className="lg:col-span-5 space-y-5">
             <div className="flex items-center gap-3">
               <motion.div
                 whileHover={{ rotate: 10, scale: 1.08 }}
-                className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-zinc-950 font-bold shadow-md shadow-amber-500/20"
+                className="w-10 h-10 rounded-xl overflow-hidden border border-amber-500/40 shadow-md shadow-amber-500/20 bg-zinc-950"
               >
-                <Code2 className="w-5 h-5" />
+                <img src="/ME_Portfolio_Logo.webp" alt="Mohammed Eloudyy Logo" className="w-full h-full object-cover" width="40" height="40" loading="lazy" />
               </motion.div>
               <div>
                 <span className="text-lg font-extrabold text-white tracking-tight">
@@ -161,7 +161,7 @@ export default function Footer() {
               <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
               Contact Direct
             </h4>
-            
+
             {/* Interactive Email Copy Box */}
             <div className="space-y-2">
               <span className="text-xs text-zinc-400 font-mono block">Email :</span>
@@ -199,7 +199,7 @@ export default function Footer() {
 
         {/* Bottom Bar: Social Icons & Copyright */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-zinc-400">
-          
+
           {/* Social Links Icons */}
           <div className="flex items-center gap-2.5">
             <span className="font-mono text-zinc-500 mr-1 uppercase text-[11px]">Réseaux :</span>

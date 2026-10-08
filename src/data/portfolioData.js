@@ -8,8 +8,8 @@ export const personalData = {
   phoneClean: "+212600224514",
   status: "Disponible pour opportunités (CDI, CDD & Freelance)",
   bio: "Pour moi, développer une application ne consiste pas simplement à écrire du code, mais à construire une solution qui répond à un besoin concret. Technicien Spécialisé en Développement Digital, je m’intéresse particulièrement au développement web Full Stack et à la création d’interfaces simples, modernes et utiles. J’aime comprendre le problème avant de chercher la solution, puis transformer une idée en application fonctionnelle, de la conception du backend avec Laravel & MySQL jusqu’à l’interface avec React.js.",
-  avatar: "./MED_PIC_PRO.jpg",
-  cv: "./CV_Mohammed_Eloudyy_DEVOWF.pdf",
+  avatar: "/MED_PIC_PRO.webp",
+  cv: "/CV_Mohammed_Eloudyy_DEVOWF.pdf",
   socials: {
     github: "https://github.com/MohammedEloudyy",
     linkedin: "https://linkedin.com/in/mohammed-eloudyy-170585208",
@@ -92,7 +92,7 @@ export const projectsData = [
     title: "Syndic Management System (SaaS)",
     category: "Full Stack",
     description: "Solution SaaS web centralisée et complète pour la gestion de copropriétés et d'immeubles : résidents, cotisations, dépenses, sécurité et reporting financier.",
-    image: "./syndic-preview.png",
+    image: "/Syndic.webp",
     tags: ["Laravel", "React.js", "Tailwind CSS", "MySQL", "Laravel Sanctum", "API REST"],
     features: [
       "Conception et développement d'une architecture SaaS multi-copropriétés",
@@ -107,7 +107,7 @@ export const projectsData = [
     title: "Mio Padre Ristorante",
     category: "Frontend",
     description: "Application web responsive premium pour un restaurant italien avec menu digital interactif, animations Framer Motion et système de réservation WhatsApp.",
-    image: "./mio-padre-preview.jpg",
+    image: "/Mio_padre.webp",
     tags: ["React 19", "Vite 8", "Tailwind CSS 4", "Framer Motion", "React Router"],
     features: [
       "Menu digital interactif avec filtres par catégorie, ingrédients & accords mets-vins",
